@@ -1,12 +1,24 @@
 import React from 'react';
 import TaskCard from './TaskCard';
 import './BoardSection.css';
-
+/**
+ * BoardSection component represents a section of the Kanban board,
+ * containing tasks with the same status.
+ * 
+ * Props:
+ * - title: The title of the section (e.g., 'To Do', 'In Progress').
+ * - tasks: Array of task objects that belong to this section.
+ * - onDragStart: Function to handle the drag start event.
+ * - onDeleteTask: Function to handle the deletion of a task.
+ * - onSaveEdit: Function to handle saving the edited task.
+ */
 const BoardSection = ({ title, tasks, onDragStart, onDeleteTask, onSaveEdit }) => {
     const handleDragOver = event => {
         event.preventDefault();
     };
-
+/**
+     * Prevent default behavior to allow dropping.
+     */
     const handleDrop = (event, newStatus) => {
         event.preventDefault();
         const taskId = event.dataTransfer.getData('task');
