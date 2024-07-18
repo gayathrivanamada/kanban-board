@@ -5,14 +5,14 @@
     overflow: hidden;
     height: 70vh;
 }
-
+/* Board-header*/
 .board-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
-
+/* Search bar styling*/
 .search-bar {
     width: 300px;
     padding: 8px;
@@ -20,12 +20,12 @@
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
+/*add-task-container*/
 .add-task-container {
     display: flex;
     align-items: center;
 }
-
+/*add-task-button*/
 .add-task-button {
     background-color: #007bff;
     color: #fff;
@@ -40,7 +40,7 @@
     background-color: wheat;
     cursor: not-allowed;
 }
-
+/*task-card*/
 .task-card {
     background-color: white;
     padding: 10px;
@@ -49,7 +49,7 @@
     border-radius: 4px;
     width: 200px;
 }
-
+/*task-card input and textarea*/
 .task-card input[type="text"],
 .task-card textarea {
     width: calc(100% - 20px);
@@ -58,7 +58,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
+/*task-card button*/
 .task-card button {
     background-color: #28a745;
     color: #fff;
@@ -73,13 +73,13 @@
 .task-card button:hover {
     background-color: #218838;
 }
-
+/*board-sections*/
 .board-sections {
     display: flex;
     justify-content: space-between;
-    /* Adjust as needed */
+   
 }
-
+/*board-columns*/
 .board-column {
     flex: 1;
     /* Each column takes equal space */
