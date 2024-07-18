@@ -1,46 +1,47 @@
 import React, { useState } from 'react';
 import BoardSection from './BoardSection';
 import './board.css';
-
+// The main KanbanBoard component
 const KanbanBoard = () => {
+// Initial set of tasks for the Kanban board
     const initialTasks = [
         { id: 1, title: 'Task 1', description: 'Description for Task 1', status: 'todo' },
         { id: 2, title: 'Task 2', description: 'Description for Task 2', status: 'inProgress' },
         { id: 3, title: 'Task 3', description: 'Description for Task 3', status: 'peerReview' },
         { id: 4, title: 'Task 4', description: 'Description for Task 4', status: 'done' },
     ];
-
+ // State hooks for tasks, search query, adding task, new task title, and new task description
     const [tasks, setTasks] = useState(initialTasks);
     const [searchQuery, setSearchQuery] = useState('');
     const [isAddingTask, setIsAddingTask] = useState(false);
     const [newTaskTitle, setNewTaskTitle] = useState('');
     const [newTaskDescription, setNewTaskDescription] = useState('');
-
+// Handle handle Drag event for tasks
     const handleDragStart = (event, task) => {
         event.dataTransfer.setData('task', JSON.stringify(task));
         event.dataTransfer.setData('source', task.status);
     };
-
+ // Handle saving edited task
     const handleSaveEdit = (taskId, updatedTask) => {
         const updatedTasks = tasks.map(task =>
             task.id === taskId ? { ...task, ...updatedTask } : task
         );
         setTasks(updatedTasks);
     };
-
+     // Handle task deletion
     const handleDeleteTask = taskId => {
         const updatedTasks = tasks.filter(task => task.id !== taskId);
         setTasks(updatedTasks);
     };
-
+   // Handle search query change
     const handleSearchChange = event => {
         setSearchQuery(event.target.value);
     };
-
+ // Handle adding a new task
     const handleAddTask = () => {
         setIsAddingTask(true);
     };
-
+// Handle creating a new task
     const handleCreateTask = () => {
         const newTask = {
             id: tasks.length + 1,
@@ -60,6 +61,7 @@ const KanbanBoard = () => {
             <div className="board-header">
                 <input
                     type="text"
+    // Search Bar and searching tasks
                     placeholder="Search tasks..."
                     value={searchQuery}
                     onChange={handleSearchChange}
