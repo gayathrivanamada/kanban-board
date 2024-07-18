@@ -1,0 +1,174 @@
+.kanban-board {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    overflow: hidden;
+    height: 70vh;
+}
+
+.board-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 300px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-task-container {
+    display: flex;
+    align-items: center;
+}
+
+.add-task-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-task-button:disabled {
+    background-color: wheat;
+    cursor: not-allowed;
+}
+
+.task-card {
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.task-card input[type="text"],
+.task-card textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.task-card button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.task-card button:hover {
+    background-color: #218838;
+}
+
+.board-sections {
+    display: flex;
+    justify-content: space-between;
+    /* Adjust as needed */
+}
+
+.board-column {
+    flex: 1;
+    /* Each column takes equal space */
+    margin-right: 20px;
+    /* Adjust spacing between columns */
+}
+
+.board-section {
+    background-color: #f1a7a7;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.task-cards {
+    display: flex;
+    flex-direction: column;
+    /* Ensure task cards stack vertically */
+}
+
+.task-card {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+.task-card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.task-card p {
+    margin-bottom: 10px;
+}
+
+.edit-form {
+    margin-bottom: 10px;
+}
+
+.edit-form input,
+.edit-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.edit-buttons {
+    text-align: right;
+}
+
+.edit-buttons button {
+    margin-left: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.task-card-buttons {
+    text-align: right;
+}
+
+.task-card-buttons button {
+    margin-left: 5px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.task-card-buttons button:hover {
+    background-color: #c82333;
+}

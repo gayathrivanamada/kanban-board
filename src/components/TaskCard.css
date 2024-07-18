@@ -1,0 +1,52 @@
+.task-card {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-card.todo {
+    border-left: 4px solid #ffcc80;
+}
+
+.task-card.inprogress {
+    border-left: 4px solid #81c784;
+}
+
+.task-card.peerreview {
+    border-left: 4px solid #4fc3f7;
+}
+
+.task-card.done {
+    border-left: 4px solid #bdbdbd;
+}
+
+.task-card h3 {
+    margin-top: 0;
+}
+
+.task-card p {
+    margin-bottom: 10px;
+}
+
+.edit-form {
+    margin-bottom: 10px;
+}
+
+.edit-form input,
+.edit-form textarea {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.edit-buttons button {
+    margin-right: 10px;
+}
+
+.task-card-buttons button {
+    margin-right: 10px;
+}

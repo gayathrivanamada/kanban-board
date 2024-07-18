@@ -1,0 +1,19 @@
+.board-section {
+    background-color: #a81f1f;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    height: 70vh;
+    overflow-y: auto;
+}
+
+.section-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.task-cards {
+    display: flex;
+    flex-direction: column;
+    /* Ensure task cards stack vertically */
+}
