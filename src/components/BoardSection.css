@@ -1,19 +1,103 @@
-.board-section {
-    background-color: #a81f1f;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    height: 70vh;
-    overflow-y: auto;
-}
-
-.section-title {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.task-cards {
+.kanban-board {
     display: flex;
     flex-direction: column;
-    /* Ensure task cards stack vertically */
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.board-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.add-task-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.add-task-button {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-task-button:disabled {
+    background-color: #ccc;
+}
+
+.task-card {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 600px;
+}
+
+.task-card input,
+.task-card textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.board-sections {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    justify-content: center; /* Center columns */
+}
+
+.board-column {
+    flex: 1;
+    min-width: 250px; /* responsiveness */
+    max-width: 300px; /* Seted a maximum width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    .board-column {
+        min-width: 200px;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .board-column {
+        min-width: 150px;
+        max-width: 200px;
+    }
+
+    .task-card {
+        width: 30%;
+    }
 }
